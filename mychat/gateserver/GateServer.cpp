@@ -12,6 +12,7 @@ int main() {
 			});
 
 		std::make_shared<CServer>(ioc, port)->Start();
+		std::cout << "Gate Serer listen on port: " << port << std::endl;
 		ioc.run();   //开始轮询
 	}
 	catch (std::exception const& e) {
