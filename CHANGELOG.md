@@ -13,4 +13,6 @@
 
   ### 更新
 - `mychat/` - 即时通讯软件
-  - 通过Beast实现http get请求
+  - 通过Beast实现http get请求处理
+  - 通过实现简易修复url函数修复带参数的请求无法解析
+  - 通过bseast实现http post请求以发送验证码
