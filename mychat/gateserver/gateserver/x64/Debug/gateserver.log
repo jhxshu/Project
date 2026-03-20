@@ -1,9 +1,22 @@
-﻿  HTTPConnection.cpp
+﻿  GateServer.cpp
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
-  (编译源文件“HTTPConnection.cpp”)
+  (编译源文件“GateServer.cpp”)
   
-  gateserver.vcxproj -> C:\Users\Kevin\Desktop\cpp_project\project\gateserver\x64\Debug\GateServer.exe
+  LogicSystem.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
+  (编译源文件“LogicSystem.cpp”)
+  
+  VerifyGrpcClient.cpp
+C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
+  (编译源文件“VerifyGrpcClient.cpp”)
+  
+  正在生成代码...
+  gateserver.vcxproj -> C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\x64\Debug\GateServer.exe

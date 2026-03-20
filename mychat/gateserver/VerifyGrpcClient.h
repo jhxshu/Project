@@ -1,0 +1,40 @@
+﻿#pragma once
+#include <grpcpp/grpcpp.h>
+#include "message.grpc.pb.h"
+#include "const.h"
+
+using grpc::Channel;
+using grpc::Status;
+using grpc::ClientContext;
+
+using message::GetVarifyReq;
+using message::GetVarifyRsp;
+using message::VarifyService;
+
+class VerifyGrpcClient:public Singleton<VerifyGrpcClient>
+{
+	friend class Singleton<VerifyGrpcClient>;
+public:
+	GetVarifyRsp GetVerifyCode(std::string email) {
+		ClientContext context;
+		GetVarifyRsp reply;
+		GetVarifyReq request;
+		request.set_email(email);  //设置成员
+
+		Status status = stub_->GetVarifyCode(&context, request, &reply);
+		if (status.ok()) {
+			return reply;
+		}
+		else {
+			reply.set_error(ErrorCodes::RPCFailed);
+			return reply;
+		}
+	}
+private:
+	VerifyGrpcClient() {
+		std::shared_ptr<Channel> Channel = grpc::CreateChannel("0.0.0.0:50051", grpc::InsecureChannelCredentials());
+		stub_ = VarifyService::NewStub(Channel); 
+	}
+	std::unique_ptr<VarifyService::Stub> stub_;
+};
+

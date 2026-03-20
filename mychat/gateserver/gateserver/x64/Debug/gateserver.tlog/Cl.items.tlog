@@ -1,4 +1,8 @@
-C:\Users\Kevin\Desktop\cpp_project\project\gateserver\CServer.cpp;C:\Users\Kevin\Desktop\cpp_project\project\gateserver\GateServer\x64\Debug\CServer.obj
-C:\Users\Kevin\Desktop\cpp_project\project\gateserver\GateServer.cpp;C:\Users\Kevin\Desktop\cpp_project\project\gateserver\GateServer\x64\Debug\GateServer.obj
-C:\Users\Kevin\Desktop\cpp_project\project\gateserver\HTTPConnection.cpp;C:\Users\Kevin\Desktop\cpp_project\project\gateserver\GateServer\x64\Debug\HTTPConnection.obj
-C:\Users\Kevin\Desktop\cpp_project\project\gateserver\LogicSystem.cpp;C:\Users\Kevin\Desktop\cpp_project\project\gateserver\GateServer\x64\Debug\LogicSystem.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\ConfigMgr.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\ConfigMgr.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\CServer.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\CServer.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\GateServer.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\HTTPConnection.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\HTTPConnection.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\LogicSystem.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\message.grpc.pb.cc;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\message.grpc.pb.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\message.pb.cc;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\message.pb.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\VerifyGrpcClient.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\VerifyGrpcClient.obj
