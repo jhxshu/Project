@@ -1,22 +1,36 @@
-﻿  GateServer.cpp
+﻿  LogicSystem.cpp
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
-  (编译源文件“GateServer.cpp”)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(46,5): error C2653: “MysqlMgr”: 不是类或命名空间名称
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(46,30): error C2039: "TestProcedure": 不是 "LogicSystem" 的成员
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.h(5,7):
+      参见“LogicSystem”的声明
   
-  LogicSystem.cpp
-  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
-  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
-  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
-  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
-  (编译源文件“LogicSystem.cpp”)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(124,54): error C2065: “CODEPREFIX”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(142,15): error C2653: “MysqlMgr”: 不是类或命名空间名称
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(142,40): error C2039: "RegUser": 不是 "LogicSystem" 的成员
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.h(5,7):
+      参见“LogicSystem”的声明
   
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(186,54): error C2065: “CODEPREFIX”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(203,24): error C2653: “MysqlMgr”: 不是类或命名空间名称
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(203,49): error C2039: "CheckEmail": 不是 "LogicSystem" 的成员
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.h(5,7):
+      参见“LogicSystem”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(213,17): error C2653: “MysqlMgr”: 不是类或命名空间名称
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(213,42): error C2039: "UpdatePwd": 不是 "LogicSystem" 的成员
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.h(5,7):
+      参见“LogicSystem”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(252,14): error C3878: 语法错误:“expression”后出现意外标记“userInfo”
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(283,6): error C2059: 语法错误:“)”
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp(294,17): error C2084: 函数“LogicSystem::~LogicSystem(void)”已有主体
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.h(8,3):
+      参见“LogicSystem::~LogicSystem”的前一个定义
+  
+  message.grpc.pb.cc
   VerifyGrpcClient.cpp
-C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
-  (编译源文件“VerifyGrpcClient.cpp”)
-  
   正在生成代码...
-  gateserver.vcxproj -> C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\x64\Debug\GateServer.exe
