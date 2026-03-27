@@ -28,7 +28,7 @@ LogicSystem::LogicSystem() {
 					std::cout << "Failed to parse JSON data!" << std::endl;
 					root["error"] = ErrorCodes::Error_Json;
 					std::string jsonstr = root.toStyledString();
-					beast::ostream(connection->_response.body()) << jsonstr;
+					beast::ostream(connection ->_response.body()) << jsonstr;
 					return true;
 				}
 
@@ -43,7 +43,6 @@ LogicSystem::LogicSystem() {
 				auto email = src_root["email"].asString();
 				int uid = 0;
 				std::string name = "";
-				MysqlMgr::GetInstance()->TestProcedure(email, uid, name);
 				cout << "email is " << email << endl;
 				root["error"] = ErrorCodes::Success;
 				root["email"] = src_root["email"];
@@ -88,7 +87,7 @@ LogicSystem::LogicSystem() {
 				beast::ostream(connection->_response.body()) << jsonstr;
 				return true;
 				});
-			//day11 注册用户逻辑
+
 			RegPost("/user_register", [](std::shared_ptr<HttpConnection> connection) {
 				auto body_str = boost::beast::buffers_to_string(connection->_request.body().data());
 				std::cout << "receive body is " << body_str << std::endl;
@@ -224,7 +223,7 @@ LogicSystem::LogicSystem() {
 				root["email"] = email;
 				root["user"] = name;
 				root["passwd"] = pwd;
-				root["Verifycode"] = src_root["Verifycode"].asString();
+				root["verifycode"] = src_root["verifycode"].asString();
 				std::string jsonstr = root.toStyledString();
 				beast::ostream(connection->_response.body()) << jsonstr;
 				return true;
@@ -259,24 +258,10 @@ LogicSystem::LogicSystem() {
 					beast::ostream(connection->_response.body()) << jsonstr;
 					return true;
 				}
-
-				//查询StatusServer找到合适的连接
-				auto reply = StatusGrpcClient::GetInstance()->GetChatServer(userInfo.uid);
-				if (reply.error()) {
-					std::cout << " grpc get chat server failed, error is " << reply.error() << std::endl;
-					root["error"] = ErrorCodes::RPCFailed;
-					std::string jsonstr = root.toStyledString();
-					beast::ostream(connection->_response.body()) << jsonstr;
-					return true;
-				}
-
 				std::cout << "succeed to load userinfo uid is " << userInfo.uid << std::endl;
 				root["error"] = 0;
 				root["email"] = email;
 				root["uid"] = userInfo.uid;
-				root["token"] = reply.token();
-				root["host"] = reply.host();
-				root["port"] = reply.port();
 				std::string jsonstr = root.toStyledString();
 				beast::ostream(connection->_response.body()) << jsonstr;
 				return true;

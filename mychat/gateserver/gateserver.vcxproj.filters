@@ -30,9 +30,6 @@
     <ClCompile Include="message.grpc.pb.cc">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="message.pb.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="VerifyGrpcClient.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -45,10 +42,16 @@
     <ClCompile Include="RedisMgr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MsqlDao.cpp">
+    <ClCompile Include="MysqlDao.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MysqlMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="message.pb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusGrpcClient.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,9 +74,6 @@
     <ClInclude Include="message.grpc.pb.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="message.pb.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="VerifyGrpcClient.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -92,9 +92,17 @@
     <ClInclude Include="MysqlMgr.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="message.pb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusGrpcClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="message.proto" />
-    <None Include="config.ini" />
+    <None Include="x64\Debug\config.ini">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

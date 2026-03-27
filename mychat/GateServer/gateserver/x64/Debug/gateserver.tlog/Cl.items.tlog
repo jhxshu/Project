@@ -1,0 +1,13 @@
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\AsioIOServicePool.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\AsioIOServicePool.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\ConfigMgr.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\ConfigMgr.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\CServer.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\CServer.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\GateServer.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\HTTPConnection.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\HTTPConnection.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\LogicSystem.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\LogicSystem.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\message.grpc.pb.cc;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\message.grpc.pb.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\message.pb.cc;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\message.pb.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\MysqlDao.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\MysqlDao.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\MysqlMgr.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\MysqlMgr.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\RedisMgr.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\RedisMgr.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\StatusGrpcClient.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\StatusGrpcClient.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\VerifyGrpcClient.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\gateserver\GateServer\x64\Debug\VerifyGrpcClient.obj

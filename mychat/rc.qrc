@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>res/ico.png</file>
-        <file>res/ico2.png</file>
-        <file>res/ico1.png</file>
-        <file>style/stylesheet.qss</file>
-    </qresource>
-</RCC>

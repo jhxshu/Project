@@ -6,6 +6,7 @@
 #include "ConfigMgr.h"
 #include "const.h"
 #include "RedisMgr.h"
+#include <boost/filesystem.hpp>
 void TestRedis() {
 	//连接redis 需要启动才可以进行连接
 //redis默认监听端口为6387 可以再配置文件中修改
@@ -117,27 +118,39 @@ void TestRedisMgr() {
 	assert(RedisMgr::GetInstance()->LPop("lpushkey1", value));
 	assert(RedisMgr::GetInstance()->LPop("lpushkey2", value) == false);
 }
-int main() {
-	auto& gCFgMgr = ConfigMgr::Inst();
-	std::string gate_port_str = gCFgMgr["GateServer"]["Port"];
-	unsigned short gate_port = atoi(gate_port_str.c_str());
-	try {
-		unsigned short port = static_cast<unsigned short>(8080);
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/ini_parser.hpp>
+#include <iostream>
+
+namespace pt = boost::property_tree;
+
+int main()
+{
+	try
+	{
+		RedisMgr::GetInstance();
+		auto& gCfgMgr = ConfigMgr::Inst();
+		std::string gate_port_str = gCfgMgr["GateServer"]["Port"];
+		unsigned short gate_port = atoi(gate_port_str.c_str());
 		net::io_context ioc{ 1 };
 		boost::asio::signal_set signals(ioc, SIGINT, SIGTERM);
 		signals.async_wait([&ioc](const boost::system::error_code& error, int signal_number) {
+
 			if (error) {
 				return;
 			}
 			ioc.stop();
 			});
-
-		std::make_shared<CServer>(ioc, port)->Start();
-		std::cout << "Gate Serer listen on port: " << port << std::endl;
-		ioc.run();   //开始轮询
+		std::make_shared<CServer>(ioc, gate_port)->Start();
+		std::cout << "Gate Server listen on port: " << gate_port << std::endl;
+		ioc.run();
+		RedisMgr::GetInstance()->Close();
 	}
-	catch (std::exception const& e) {
+	catch (std::exception const& e)
+	{
 		std::cerr << "Error: " << e.what() << std::endl;
+		RedisMgr::GetInstance()->Close();
 		return EXIT_FAILURE;
 	}
+
 }
