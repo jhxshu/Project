@@ -1,0 +1,34 @@
+# 忽略所有 .pdb 调试符号文件
+*.pdb
+
+# 忽略 Visual Studio 生成的目录和文件
+.vs/                    # VS 的缓存、配置、断点等（整个文件夹）
+bin/                    # 编译输出目录
+obj/                    # 编译中间文件目录
+
+# 忽略用户特定配置
+*.user                  # 用户调试启动配置
+*.suo                   # 解决方案用户选项
+*.userosscache          # VS 用户缓存
+*.sln.docstates         # 解决方案文档状态
+
+# 忽略编译生成的其他文件
+*.exe                   # 可执行文件（一般也不提交）
+*.dll                   # 动态链接库
+*.lib                   # 静态库
+*.ilk                   # 增量链接器文件
+*.log                   # 日志文件
+*.cache                 # 缓存文件
+
+# 忽略发布打包文件
+*.nupkg                 # NuGet 包
+*.vsix                  # VS 扩展安装包
+
+# 忽略测试相关
+TestResults/            # 单元测试结果文件夹
+*.trx                   # 测试结果文件
+*.coverage              # 代码覆盖率文件
+mychat/GateServer/x64/Debug/GateServer.pdb
+mychat/GateServer/x64/Debug/GateServer.pdb
+mychat/GateServer/x64/Debug/GateServer.pdb
+mychat/GateServer/x64/Debug/GateServer.pdb
