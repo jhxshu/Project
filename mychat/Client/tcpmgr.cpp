@@ -99,6 +99,8 @@ void TcpMgr::handleMsg(ReqId id, int len, QByteArray data){
     find_iter.value()(id, len, data);
 }
 
+
+
 void TcpMgr::slot_tcp_connect(ServerInfo si){
     qDebug() << "receive tcp connect signal.";
     qDebug() << "Connecting to server...";
@@ -108,17 +110,16 @@ void TcpMgr::slot_tcp_connect(ServerInfo si){
     _socket.connectToHost(si.Host, _port);
 }
 
-void TcpMgr::slot_send_data(ReqId reqId, QString data){
+void TcpMgr::slot_send_data(ReqId reqId, QByteArray dataBytes)
+{
     uint16_t id = reqId;
-    QByteArray dataBytes = data.toUtf8();
-    quint16 len = static_cast<quint16>(data.size());
-
+    quint16 len = static_cast<quint16>(dataBytes.length());
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
-    out.setByteOrder(QByteArrayData::BigEndian);
+    out.setByteOrder(QDataStream::BigEndian);
 
     out << id << len;
-    block.append(data);
+    block.append(dataBytes);
     _socket.write(block);
+    qDebug() << "tcp mgr send byte data is " << block ;
 }
-

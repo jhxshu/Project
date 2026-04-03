@@ -1,0 +1,29 @@
+#include "chatuserwid.h"
+#include "ui_chatuserwid.h"
+
+ChatUserWid::ChatUserWid(QWidget *parent)
+    : ListItemBase(parent)
+    , ui(new Ui::ChatUserWid)
+{
+    ui->setupUi(this);
+    SetItemType(ListItemType::CHAt_USER_ITEM);
+}
+
+ChatUserWid::~ChatUserWid()
+{
+    delete ui;
+}
+
+void ChatUserWid::SetInfo(QString name, QString head, QString msg){
+    _name = name;
+    _head = head;
+    _msg = msg;
+
+    QPixmap pixmap(_head);
+
+    ui->icon_lb->setPixmap(pixmap.scale(ui->icon_lb->size() ,Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->icon_lb->setScaledContents(true);
+
+    ui->user_name_lb->setText(_name);
+    ui->user_chat_lb->setText(_msg);
+}

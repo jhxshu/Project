@@ -6,12 +6,12 @@
   ConfigMgr.cpp
   message.grpc.pb.cc
   message.pb.cc
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\message.pb.cc(530,67): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\message.pb.cc(787,65): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\message.pb.cc(1009,67): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\message.pb.cc(1305,65): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\message.pb.cc(1547,67): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\message.pb.cc(1554,65): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(530,67): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(787,65): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(1009,67): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(1305,65): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(1547,67): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(1554,65): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
   MysqlDao.cpp
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
@@ -20,7 +20,7 @@ C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\message.pb.cc(15
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
   (编译源文件“MysqlDao.cpp”)
   
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\MysqlDao.h(131,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\MysqlDao.h(131,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   (编译源文件“MysqlDao.cpp”)
   
   MysqlMgr.cpp
@@ -31,7 +31,7 @@ C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\MysqlDao.h(131,1
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
   (编译源文件“MysqlMgr.cpp”)
   
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\MysqlDao.h(131,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\MysqlDao.h(131,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   (编译源文件“MysqlMgr.cpp”)
   
   RedisMgr.cpp
@@ -42,7 +42,7 @@ C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\MysqlDao.h(131,1
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
   (编译源文件“RedisMgr.cpp”)
   
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\RedisMgr.h(184,27): warning C4101: “exp”: 未引用的局部变量
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(184,27): warning C4101: “exp”: 未引用的局部变量
   (编译源文件“RedisMgr.cpp”)
   
   StatusServer.cpp
@@ -53,10 +53,10 @@ C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\RedisMgr.h(184,2
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
   (编译源文件“StatusServer.cpp”)
   
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\RedisMgr.h(184,27): warning C4101: “exp”: 未引用的局部变量
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(184,27): warning C4101: “exp”: 未引用的局部变量
   (编译源文件“StatusServer.cpp”)
   
-C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\MysqlDao.h(131,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\MysqlDao.h(131,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   (编译源文件“StatusServer.cpp”)
   
   StatusServiceImpl.cpp
@@ -64,8 +64,9 @@ C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warn
   (编译源文件“StatusServiceImpl.cpp”)
   
   正在生成代码...
-  StatusServer.vcxproj -> C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\x64\Debug\StatusServer.exe
-  C:\Users\Kevin\Desktop\cpp_project\boostasio-learn\StatusServer\config.ini
+  StatusServer.vcxproj -> C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\x64\Debug\StatusServer.exe
+  C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\config.ini
   复制了 1 个文件
-  找不到文件 - *.dll
-  复制了 0 个文件
+  C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\mysqlcppconn-9-vs14.dll
+  C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\mysqlcppconn8-2-vs14.dll
+  复制了 2 个文件

@@ -3,6 +3,7 @@
 #include <QTcpSocket>
 #include <singleton.h>
 #include <global.h>
+#include <QJsonArray>
 class TcpMgr:public QObject, public Singleton<TcpMgr>,
                public std::enable_shared_from_this<TcpMgr>
 {
@@ -28,12 +29,13 @@ public slots:
     void slot_send_data(ReqId reqId, QByteArray data);
 signals:
     void sig_con_success(bool bsuccess);
-    void sig_send_data(ReqId reqId, QByteArray data);
+    void sig_send_data(ReqId reqId, QByteArray jsonData);
     void sig_swich_chatdlg();
     void sig_load_apply_list(QJsonArray json_array);
     void sig_login_failed(int);
     void sig_notify_offline();
     void sig_connection_closed();
+    void sig_switch_chatdlg();
 };
 
 #endif // TCPMGR_H

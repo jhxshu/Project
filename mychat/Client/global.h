@@ -56,4 +56,19 @@ struct ServerInfo{
     int Uid;
 };
 
+enum ChatUIMode{
+    SearchMode,
+    ChatMode,
+    ContactMode,
+};
+
+enum ListItemType{
+    CHAt_USER_ITEM,
+    CONTACT_SUER_ITEM,
+    SEARCH_USER_ITEM,
+    ADD_USER_TIP_ITEM,
+    INVALID_ITEM,
+    GROUP_TIP_ITEM,
+};
+
 #endif // GLOBAL_H

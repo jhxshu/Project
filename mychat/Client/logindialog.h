@@ -27,6 +27,8 @@ private:
     void showTip(QString str, bool b_ok);
     QMap<ReqId, std::function<void(const QJsonObject&)>> _handlers;
     bool enableBtn(bool enabled);
+    int _uid;
+    QString _token;
 signals:
     void switchRegister();
     void switchReset();
@@ -35,7 +37,8 @@ public slots:
     void slot_forget_pwd();
 private slots:
     void on_login_btn_clicked();
-    void slot_login_mod_finish(ReqId id, QString res, ErrorCodes err, Modules mod);
+    void slot_login_mod_finish(ReqId id, QString res, ErrorCodes err);
+    void slot_tcp_con_finish(bool bsuccess);
 };
 
 #endif // LOGINDIALOG_H

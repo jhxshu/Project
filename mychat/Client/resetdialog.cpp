@@ -142,7 +142,6 @@ bool ResetDialog::checkEmailValid()
         AddTipErr(TipErr::TIP_EMAIL_ERR, tr("邮箱地址不正确"));
         return false;
     }
-
     DelTipErr(TipErr::TIP_EMAIL_ERR);
     return true;
 }

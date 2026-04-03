@@ -1,0 +1,12 @@
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\AsioIOServicePool.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\ChatServer.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ConfigMgr.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\ConfigMgr.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\CServer.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\CServer.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\HTTPConnection.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\HTTPConnection.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\LogicSystem.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\LogicSystem.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.cc;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\message.grpc.pb.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.pb.cc;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\message.pb.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\MysqlDao.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\MysqlDao.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\MysqlMgr.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\MysqlMgr.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\RedisMgr.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\RedisMgr.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\VerifyGrpcClient.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServer\x64\Debug\VerifyGrpcClient.obj

@@ -1,0 +1,37 @@
+﻿  LogicSystem.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
+  (编译源文件“LogicSystem.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\RedisMgr.h(184,27): warning C4101: “exp”: 未引用的局部变量
+  (编译源文件“LogicSystem.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\MysqlDao.h(131,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  (编译源文件“LogicSystem.cpp”)
+  
+  message.grpc.pb.cc
+  RedisMgr.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
+  (编译源文件“RedisMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\RedisMgr.h(184,27): warning C4101: “exp”: 未引用的局部变量
+  (编译源文件“RedisMgr.cpp”)
+  
+  VerifyGrpcClient.cpp
+C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
+  (编译源文件“VerifyGrpcClient.cpp”)
+  
+  正在生成代码...
+  ChatServer.vcxproj -> C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\x64\Debug\ChatServer.exe
+  找不到文件 - config.ini
+  复制了 0 个文件
+  C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\mysqlcppconn-9-vs14.dll
+  C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\mysqlcppconn8-2-vs14.dll
+  复制了 2 个文件

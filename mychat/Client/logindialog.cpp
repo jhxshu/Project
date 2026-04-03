@@ -4,6 +4,7 @@
 #include <QPainter>
 #include <QPainterPath>
 #include <httpmgr.h>
+#include <tcpmgr.h>
 LoginDialog::LoginDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::LoginDialog)
@@ -169,7 +170,7 @@ void LoginDialog::on_login_btn_clicked()
                                         json_obj, ReqId::ID_LOGIN_USER,Modules::LOGINMOD);
 }
 
-void LoginDialog::slot_login_mod_finish(ReqId id, QString res, ErrorCodes err, Modules mod)
+void LoginDialog::slot_login_mod_finish(ReqId id, QString res, ErrorCodes err)
 {
     if(err != ErrorCodes::SUCCESS){
         showTip(tr("网络请求错误"),false);
@@ -197,29 +198,20 @@ void LoginDialog::slot_login_mod_finish(ReqId id, QString res, ErrorCodes err, M
     return;
 }
 
-void LoginDialog::initHttpHandlers()
+void LoginDialog::slot_tcp_con_finish(bool bsuccess)
 {
-    //注册获取登录回包逻辑
-    _handlers.insert(ReqId::ID_LOGIN_USER, [this](QJsonObject jsonObj){
-        int error = jsonObj["error"].toInt();
-        if(error != ErrorCodes::SUCCESS){
-            showTip(tr("参数错误"),false);
-            enableBtn(true);
-            return;
-        }
-        auto user = jsonObj["user"].toString();
+    if(bsuccess){
+        showTip(tr("聊天服务连接成功，正在登录..."), true);
+        QJsonObject jsonObj;
+        jsonObj["uid"] = _uid;
+        jsonObj["token"] = _token;
 
-        //发送信号通知tcpMgr发送长链接
-        ServerInfo si;
-        si.Uid = jsonObj["uid"].toInt();
-        si.Host = jsonObj["host"].toString();
-        si.Port = jsonObj["port"].toString();
-        si.Token = jsonObj["token"].toString();
-
-        _uid = si.Uid;
-        _token = si.Token;
-        qDebug()<< "user is " << user << " uid is " << si.Uid <<" host is "
-                 << si.Host << " Port is " << si.Port << " Token is " << si.Token;
-        emit sig_connect_tcp(si);
-    });
+        QJsonDocument doc(jsonObj);
+        QByteArray jsonString = doc.toJson(QJsonDocument::Indented);
+        emit TcpMgr::GetInstance()->sig_send_data(ReqId::ID_CHAT_LOGIN, jsonString);
+    }
+    else{
+        showTip(tr("网络异常"), false);
+        enableBtn(true);
+    }
 }
