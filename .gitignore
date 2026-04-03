@@ -1,13 +1,57 @@
-# 忽略所有 PDB 文件
-*.pdb
+# ====================== 1. Visual Studio 生成文件（必须忽略） ======================
+# VS 数据库缓存（就是你报错的 .db 文件）
+*.VC.db
+*.VC.db-shm
+*.VC.db-wal
+*.sdf
+*.opensdf
 
-# 忽略所有 .vs 文件夹（任何位置）
-.vs/
+# VS 项目/解决方案临时文件
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+*.vcxproj.user
+*.vcxproj.user.*
 
-# 忽略编译输出文件夹
+# VS 编译输出目录
+x64/
+x86/
+Debug/
+Release/
 bin/
 obj/
+ipch/
+*.log
 
-# 忽略用户配置文件
-*.user
-*.suo
+# ====================== 2. Qt 项目通用忽略规则 ======================
+*.pro.user
+*.pro.user.*
+*.qmlc
+*.jsc
+*.qrc.depends
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# ====================== 3. C++ 编译产物 ======================
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.ilk
+*.pdb
+*.lib
+*.exp
+
+# ====================== 4. IDE/系统临时文件 ======================
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.tmp
