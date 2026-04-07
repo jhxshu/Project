@@ -1,7 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <tcpmgr.h>
 #include "resetdialog.h"
-#include "tcpmgr.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,8 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(_login_dlg, &LoginDialog::switchReset, this, &MainWindow::SlotSwitchReset);
 
     connect(TcpMgr::GetInstance().get(), &TcpMgr::sig_switch_chatdlg, this, &MainWindow::SlotSwitchChat);
-
-    emit TcpMgr::GetInstance()-> sig_switch_chatdlg();
+    emit TcpMgr::GetInstance()->sig_switch_chatdlg();
 }
 
 MainWindow::~MainWindow()
@@ -90,7 +90,6 @@ void MainWindow::SlotSwitchChat()
     setCentralWidget(_chat_dlg);
     _chat_dlg->show();
     _login_dlg->hide();
-    this->setMinimumSize(1050, 900);
-    this->setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
-
+    this->setMinimumSize(QSize(1050, 900));
+    this->setMinimumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
 }

@@ -1,12 +1,11 @@
-#include <chatdialog.h>
+#include "chatdialog.h"
 #include "ui_chatdialog.h"
 #include <QAction>
 #include <QRandomGenerator>
-#include <chatuserwid.h>
-#include "loadingdlg.h"
+#include "chatuserwid.h"
 ChatDialog::ChatDialog(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::ChatDialog), _mode(ChatUIMode::ChatMode), _state(ChatUIMode::ChatMode)
+    ui(new Ui::ChatDialog), _mode(ChatUIMode::ChatMode), _state(ChatUIMode::ChatMode), _b_loading(false)
 {
     ui->setupUi(this);
     ui->add_btn->SetState("normal", "hover", "press");
@@ -29,7 +28,6 @@ ChatDialog::ChatDialog(QWidget *parent) :
             clearAction->setIcon(QIcon(":/res/close_transparent.png"));
         }
     });
-
     connect(clearAction, &QAction::triggered, [this, clearAction](){
         ui->search_edit->clear();
         clearAction->setIcon(QIcon(":/res/close_transparent.png"));
@@ -37,7 +35,7 @@ ChatDialog::ChatDialog(QWidget *parent) :
         ShowSearch(false);
     });
     ShowSearch(false);
-    connect(ui->chat_user_list, &ChatUserList::sig_loading_chat_user, this, &ChatDialog::slot_loading_chat_user);
+
     addchatUserList();
 }
 
@@ -45,32 +43,64 @@ ChatDialog::~ChatDialog(){
     delete ui;
 }
 
+std::vector<QString>  strs ={"hello world !",
+                             "nice to meet u",
+                             "New year，new life",
+                             "You have to love yourself",
+                             "My love is written in the wind ever since the whole world is you"};
+
+std::vector<QString> heads = {
+    ":/res/head_1.jpg",
+    ":/res/head_2.jpg",
+    ":/res/head_3.jpg",
+    ":/res/head_4.jpg",
+    ":/res/head_5.jpg"
+};
+
+std::vector<QString> names = {
+    "llfc",
+    "zack",
+    "golang",
+    "cpp",
+    "java",
+    "nodejs",
+    "python",
+    "rust"
+};
+
 void ChatDialog::addchatUserList()
 {
     for(int i = 0; i < 13; i++){
-        int randomValue = QRandomGenerator::global->bounded(100);
+        int randomValue = QRandomGenerator::global()->bounded(99);
         int str_i = randomValue%strs.size();
         int head_i = randomValue%heads.size();
-        int name_i = randomValue&names.size();
+        int name_i = randomValue%names.size();
 
-        auto* chat_user_wid = new ChatUserWid();
-        chat_user_wid->SetInfo(names[name_i], heads[head_i], strs[str_i]);
-        QListWidgetItem* item = new QListWidgetItem;
-        qDebug() << "chat_user_wid sizeHint is: " << chat_user_wid->sizeHint();
-        item->setSizeHint(chat_user_wid->sizeHint());
-        ui->chat_user_list->addItem(item);
-        ui->chat_user_list->setItemWidget(item, chat_user_wid);
+    auto *chat_user_wid = new ChatUserWid();
+    chat_user_wid->SetInfo(names[name_i], heads[head_i], strs[str_i]);
+    QListWidgetItem* item = new QListWidgetItem;
+    //qDebug() << "chat_user_wid sizeHintis " << chat_user_wid->sizeHint();
+    item->setSizeHint(chat_user_wid->sizeHint());
+    ui->chat_user_list->addItem(item);
+    ui->chat_user_list->setItemWidget(item, chat_user_wid);
+
     }
 }
 
-void ChatDialog::ShowSearch(bool bsearch)
-{
+void ChatDialog::ShowSearch(bool bsearch){
     if(bsearch){
         ui->chat_user_list->hide();
         ui->con_user_list->hide();
         ui->search_list->show();
+        _mode = ChatUIMode::SearchMode;
+    }
+    else if(_state == ChatUIMode::ChatMode){
+        ui->chat_user_list->show();
+        ui->con_user_list->hide();
+        ui->search_list->hide();
         _mode = ChatUIMode::ChatMode;
-    }else if(_state == ChatUIMode::ContactMode){
+    }
+    else if(_state == ChatUIMode::ContactMode){
         ui->chat_user_list->hide();
         ui->search_list->hide();
         ui->con_user_list->show();
@@ -83,13 +113,4 @@ void ChatDialog::slot_loading_chat_user()
     if(_b_loading){
         return;
     }
-    _b_loading = true;
-    LoadingDlg* loadingDialog = new LoadingDlg(this);
-    loadingDialog->setModal(true);
-    loadingDialog->show();
-    qDebug() << "add new data to list...";
-    addchatUserList();
-    loadingDialog->deleteLater();
-
-    _b_loading = false;
 }

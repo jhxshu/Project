@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <memory>
 #include <mutex>
 #include <iostream>
@@ -9,7 +9,7 @@ protected:
 	Singleton() = default;
 	Singleton(const Singleton<T>&) = delete;
 	Singleton& operator=(const Singleton<T>& st) = delete;
-
+	
 	static std::shared_ptr<T> _instance;
 public:
 	static std::shared_ptr<T> GetInstance() {

@@ -1,4 +1,4 @@
-ï»¿#pragma once
+#pragma once
 #include <fstream>  
 #include <boost/property_tree/ptree.hpp>  
 #include <boost/property_tree/ini_parser.hpp>  
@@ -7,15 +7,15 @@
 #include <iostream>
 
 struct SectionInfo {
-	SectionInfo() {}
-	~SectionInfo() {
+	SectionInfo(){}
+	~SectionInfo(){
 		_section_datas.clear();
 	}
-
+	
 	SectionInfo(const SectionInfo& src) {
 		_section_datas = src._section_datas;
 	}
-
+	
 	SectionInfo& operator = (const SectionInfo& src) {
 		if (&src == this) {
 			return *this;
@@ -26,19 +26,19 @@ struct SectionInfo {
 	}
 
 	std::map<std::string, std::string> _section_datas;
-	std::string  operator[](const std::string& key) {
+	std::string  operator[](const std::string  &key) {
 		if (_section_datas.find(key) == _section_datas.end()) {
 			return "";
 		}
-		// è¿™é‡Œå¯ä»¥æ·»åŠ ä¸€äº›è¾¹ç•Œæ£€æŸ¥  
+		// ÕâÀï¿ÉÒÔÌí¼ÓÒ»Ð©±ß½ç¼ì²é  
 		return _section_datas[key];
 	}
 
-	std::string GetValue(const std::string& key) {
+	std::string GetValue(const std::string & key) {
 		if (_section_datas.find(key) == _section_datas.end()) {
 			return "";
 		}
-		// è¿™é‡Œå¯ä»¥æ·»åŠ ä¸€äº›è¾¹ç•Œæ£€æŸ¥  
+		// ÕâÀï¿ÉÒÔÌí¼ÓÒ»Ð©±ß½ç¼ì²é  
 		return _section_datas[key];
 	}
 };
@@ -56,10 +56,6 @@ public:
 		return _config_map[section];
 	}
 
-	static ConfigMgr& Inst() {
-		static ConfigMgr cfg_mgr;
-		return cfg_mgr;	 //å’Œè¿›ç¨‹çš„ç”Ÿå‘½å‘¨æœŸä¸€æ ·é•¿ï¼Œ çº¿ç¨‹å®‰å…¨çš„å•ä¾‹æ¨¡å¼
-	}
 
 	ConfigMgr& operator=(const ConfigMgr& src) {
 		if (&src == this) {
@@ -67,17 +63,21 @@ public:
 		}
 
 		this->_config_map = src._config_map;
-		return *this;
 	};
 
 	ConfigMgr(const ConfigMgr& src) {
 		this->_config_map = src._config_map;
 	}
 
-	std::string GetValue(const std::string& section, const std::string& key);
+	static ConfigMgr& Inst() {
+		static ConfigMgr cfg_mgr;
+		return cfg_mgr;
+	}
+
+	std::string GetValue(const std::string& section, const std::string & key);
 private:
 	ConfigMgr();
-	// å­˜å‚¨sectionå’Œkey-valueå¯¹çš„map  
+	// ´æ´¢sectionºÍkey-value¶ÔµÄmap  
 	std::map<std::string, SectionInfo> _config_map;
 };
 

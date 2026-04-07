@@ -1,6 +1,6 @@
 #include "listitembase.h"
 
-ListItemBase::ListItemBase(QWidget* parent) : QWidget(parent)
+ListItemBase::ListItemBase(QWidget* parent): QWidget(parent)
 {
 
 }
@@ -9,7 +9,7 @@ void ListItemBase::SetItemType(ListItemType itemType){
     _itemType = itemType;
 }
 
-ListItemType ListItemBase::GetItemType()
-{
+ListItemType ListItemBase::GetItemType(){
     return _itemType;
 }
+

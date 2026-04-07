@@ -1,20 +1,22 @@
 #ifndef CHATUSERLIST_H
 #define CHATUSERLIST_H
-#include <QObject>
 #include <QListWidget>
+#include <QWheelEvent>
 #include <QEvent>
-#include <QScroller>
+#include <QScrollBar>
 #include <QDebug>
-class ChatUserList: public QListWidget
+
+class ChatUserList:public QListWidget
 {
     Q_OBJECT
 public:
-    ChatUserList(QWidget* parent);
+    ChatUserList(QWidget* parent = nullptr);
 protected:
-    bool eventFilter(QObject* watched, QEvent* event) override;
+    bool eventFilter(QObject *watched, QEvent* event);
 
 signals:
     void sig_loading_chat_user();
+
 };
 
 #endif // CHATUSERLIST_H

@@ -1,53 +1,30 @@
-ï»¿#pragma once
-#include <boost/beast/http.hpp>
-#include <boost/beast.hpp>
-#include <boost/asio.hpp>
-#include <memory>
-#include <iostream>
-#include <unordered_map>
-#include <json/json.h>
-#include <json/value.h>
-#include <json/reader.h>
-#include "Singleton.h"
-#include <assert.h>
-#include <queue>
-#include <jdbc/mysql_driver.h>
-#include <jdbc/mysql_connection.h>
-#include <jdbc/cppconn/prepared_statement.h>
-#include <jdbc/cppconn/resultset.h>
-#include <jdbc/cppconn/statement.h>
-#include <jdbc/cppconn/exception.h>
+#pragma once
 #include <functional>
-#include <string>
 
-namespace beast = boost::beast;         // from <boost/beast.hpp>
-namespace http = beast::http;           // from <boost/beast/http.hpp>
-namespace net = boost::asio;            // from <boost/asio.hpp>
-using tcp = boost::asio::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
 
 enum ErrorCodes {
 	Success = 0,
-	Error_Json = 1001,  //Jsonè§£æé”™è¯¯
-	RPCFailed = 1002,  //RPCè¯·æ±‚é”™è¯¯
-	VerifyExpired = 1003, //éªŒè¯ç è¿‡æœŸ
-	VerifyCodeErr = 1004, //éªŒè¯ç é”™è¯¯
-	UserExist = 1005,       //ç”¨æˆ·å·²ç»å­˜åœ¨
-	PasswdErr = 1006,    //å¯†ç é”™è¯¯
-	EmailNotMatch = 1007,  //é‚®ç®±ä¸åŒ¹é…
-	PasswdUpFailed = 1008,  //æ›´æ–°å¯†ç å¤±è´¥
-	PasswdInvalid = 1009,   //å¯†ç æ›´æ–°å¤±è´¥
-	TokenInvalid = 1010,   //Tokenå¤±æ•ˆ
-	UidInvalid = 1011,  //uidæ— æ•ˆ
+	Error_Json = 1001,  //Json½âÎö´íÎó
+	RPCFailed = 1002,  //RPCÇëÇó´íÎó
+	VarifyExpired = 1003, //ÑéÖ¤Âë¹ıÆÚ
+	VarifyCodeErr = 1004, //ÑéÖ¤Âë´íÎó
+	UserExist = 1005,       //ÓÃ»§ÒÑ¾­´æÔÚ
+	PasswdErr = 1006,    //ÃÜÂë´íÎó
+	EmailNotMatch = 1007,  //ÓÊÏä²»Æ¥Åä
+	PasswdUpFailed = 1008,  //¸üĞÂÃÜÂëÊ§°Ü
+	PasswdInvalid = 1009,   //ÃÜÂë¸üĞÂÊ§°Ü
+	TokenInvalid = 1010,   //TokenÊ§Ğ§
+	UidInvalid = 1011,  //uidÎŞĞ§
 };
 
 
-// Deferç±»
+// DeferÀà
 class Defer {
 public:
-	// æ¥å—ä¸€ä¸ªlambdaè¡¨è¾¾å¼æˆ–è€…å‡½æ•°æŒ‡é’ˆ
+	// ½ÓÊÜÒ»¸ölambda±í´ïÊ½»òÕßº¯ÊıÖ¸Õë
 	Defer(std::function<void()> func) : func_(func) {}
 
-	// ææ„å‡½æ•°ä¸­æ‰§è¡Œä¼ å…¥çš„å‡½æ•°
+	// Îö¹¹º¯ÊıÖĞÖ´ĞĞ´«ÈëµÄº¯Êı
 	~Defer() {
 		func_();
 	}
@@ -56,5 +33,49 @@ private:
 	std::function<void()> func_;
 };
 
-#define CODEPREFIX  "code_"
+#define MAX_LENGTH  1024*2
+//Í·²¿×Ü³¤¶È
+#define HEAD_TOTAL_LEN 4
+//Í·²¿id³¤¶È
+#define HEAD_ID_LEN 2
+//Í·²¿Êı¾İ³¤¶È
+#define HEAD_DATA_LEN 2
+#define MAX_RECVQUE  10000
+#define MAX_SENDQUE 1000
+
+
+enum MSG_IDS {
+	MSG_CHAT_LOGIN = 1005, //ÓÃ»§µÇÂ½
+	MSG_CHAT_LOGIN_RSP = 1006, //ÓÃ»§µÇÂ½»Ø°ü
+	ID_SEARCH_USER_REQ = 1007, //ÓÃ»§ËÑË÷ÇëÇó
+	ID_SEARCH_USER_RSP = 1008, //ËÑË÷ÓÃ»§»Ø°ü
+	ID_ADD_FRIEND_REQ = 1009, //ÉêÇëÌí¼ÓºÃÓÑÇëÇó
+	ID_ADD_FRIEND_RSP  = 1010, //ÉêÇëÌí¼ÓºÃÓÑ»Ø¸´
+	ID_NOTIFY_ADD_FRIEND_REQ = 1011,  //Í¨ÖªÓÃ»§Ìí¼ÓºÃÓÑÉêÇë
+	ID_AUTH_FRIEND_REQ = 1013,  //ÈÏÖ¤ºÃÓÑÇëÇó
+	ID_AUTH_FRIEND_RSP = 1014,  //ÈÏÖ¤ºÃÓÑ»Ø¸´
+	ID_NOTIFY_AUTH_FRIEND_REQ = 1015, //Í¨ÖªÓÃ»§ÈÏÖ¤ºÃÓÑÉêÇë
+	ID_TEXT_CHAT_MSG_REQ = 1017, //ÎÄ±¾ÁÄÌìĞÅÏ¢ÇëÇó
+	ID_TEXT_CHAT_MSG_RSP = 1018, //ÎÄ±¾ÁÄÌìĞÅÏ¢»Ø¸´
+	ID_NOTIFY_TEXT_CHAT_MSG_REQ = 1019, //Í¨ÖªÓÃ»§ÎÄ±¾ÁÄÌìĞÅÏ¢
+	ID_NOTIFY_OFF_LINE_REQ = 1021, //Í¨ÖªÓÃ»§ÏÂÏß
+	ID_HEART_BEAT_REQ = 1023,      //ĞÄÌøÇëÇó
+	ID_HEARTBEAT_RSP = 1024,       //ĞÄÌø»Ø¸´
+};
+
+#define USERIPPREFIX  "uip_"
+#define USERTOKENPREFIX  "utoken_"
+#define IPCOUNTPREFIX  "ipcount_"
+#define USER_BASE_INFO "ubaseinfo_"
+#define LOGIN_COUNT  "logincount"
+#define NAME_INFO  "nameinfo_"
+#define LOCK_PREFIX "lock_"
+#define USER_SESSION_PREFIX "usession_"
+#define LOCK_COUNT "lockcount"
+
+//·Ö²¼Ê½ËøµÄ³ÖÓĞÊ±¼ä
+#define LOCK_TIME_OUT 10
+//·Ö²¼Ê½ËøµÄÖØÊÔÊ±¼ä
+#define ACQUIRE_TIME_OUT 5
+
 

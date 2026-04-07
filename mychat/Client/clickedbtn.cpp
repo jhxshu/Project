@@ -38,3 +38,11 @@ void ClickedBtn::mouseReleaseEvent(QMouseEvent* event){
     update();
     QPushButton::mouseReleaseEvent(event);
 }
+
+void ClickedBtn::leaveEvent(QEvent *event)
+{
+    setProperty("state", _normal);
+    repolish(this);
+    update();
+    QPushButton::leaveEvent(event);
+}

@@ -8,6 +8,7 @@ class CustomizeEdit : public QLineEdit
 {
     Q_OBJECT
 public:
+    explicit CustomizeEdit(QWidget *parent = nullptr);
     CustomizeEdit();
     void SetMaxLength(int maxLen);
 protected:

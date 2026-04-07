@@ -6,7 +6,7 @@ ChatUserWid::ChatUserWid(QWidget *parent)
     , ui(new Ui::ChatUserWid)
 {
     ui->setupUi(this);
-    SetItemType(ListItemType::CHAt_USER_ITEM);
+    SetItemType(ListItemType::CHAT_USER_ITEM);
 }
 
 ChatUserWid::~ChatUserWid()
@@ -21,7 +21,7 @@ void ChatUserWid::SetInfo(QString name, QString head, QString msg){
 
     QPixmap pixmap(_head);
 
-    ui->icon_lb->setPixmap(pixmap.scale(ui->icon_lb->size() ,Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->icon_lb->setPixmap(pixmap.scaled(ui->icon_lb->size(), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
     ui->icon_lb->setScaledContents(true);
 
     ui->user_name_lb->setText(_name);

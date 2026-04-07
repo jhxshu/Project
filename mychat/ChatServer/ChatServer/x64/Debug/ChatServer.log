@@ -1,37 +1,572 @@
-﻿  LogicSystem.cpp
+﻿  ChatGrpcClient.cpp
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(19,16): error C2039: "AddFriendReq": 不是 "message" 的成员
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(19,1): error C2873: “AddFriendReq”: 符号不能用在 using 声明中
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(20,16): error C2039: "AddFriendRsp": 不是 "message" 的成员
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(20,1): error C2873: “AddFriendRsp”: 符号不能用在 using 声明中
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(22,16): error C2039: "AuthFriendReq": 不是 "message" 的成员
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(22,1): error C2873: “AuthFriendReq”: 符号不能用在 using 声明中
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(23,16): error C2039: "AuthFriendRsp": 不是 "message" 的成员
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(23,1): error C2873: “AuthFriendRsp”: 符号不能用在 using 声明中
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(28,16): error C2039: "ChatService": 不是 "message" 的成员
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(28,1): error C2873: “ChatService”: 符号不能用在 using 声明中
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(30,16): error C2039: "TextChatMsgReq": 不是 "message" 的成员
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(30,1): error C2873: “TextChatMsgReq”: 符号不能用在 using 声明中
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(31,16): error C2039: "TextChatMsgRsp": 不是 "message" 的成员
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(31,1): error C2873: “TextChatMsgRsp”: 符号不能用在 using 声明中
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(32,16): error C2039: "TextChatData": 不是 "message" 的成员
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(32,1): error C2873: “TextChatData”: 符号不能用在 using 声明中
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(34,16): error C2039: "KickUserReq": 不是 "message" 的成员
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(34,1): error C2873: “KickUserReq”: 符号不能用在 using 声明中
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(35,16): error C2039: "KickUserRsp": 不是 "message" 的成员
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(35,1): error C2873: “KickUserRsp”: 符号不能用在 using 声明中
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(59,18): error C2065: “ChatService”: 未声明的标识符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(59,18): error C2653: “ChatService”: 不是类或命名空间名称
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(59,31): error C2065: “Stub”: 未声明的标识符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(59,7): error C2923: "std::unique_ptr": "Stub" 不是参数 "_Ty" 的有效 模板 类型参数
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(59,31):
+      参见“Stub”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(59,7): error C2976: “std::unique_ptr'”: 模板 参数太少
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      参见“std::unique_ptr”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(76,40): error C2065: “ChatService”: 未声明的标识符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(76,40): error C2653: “ChatService”: 不是类或命名空间名称
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(76,53): error C2065: “Stub”: 未声明的标识符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(76,29): error C2923: "std::unique_ptr": "Stub" 不是参数 "_Ty" 的有效 模板 类型参数
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(76,53):
+      参见“Stub”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(76,29): error C2976: “std::unique_ptr'”: 模板 参数太少
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      参见“std::unique_ptr”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(95,29): error C2065: “ChatService”: 未声明的标识符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(95,29): error C2653: “ChatService”: 不是类或命名空间名称
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(95,42): error C2065: “Stub”: 未声明的标识符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(95,18): error C2923: "std::unique_ptr": "Stub" 不是参数 "_Ty" 的有效 模板 类型参数
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(95,42):
+      参见“Stub”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(95,18): error C2976: “std::unique_ptr'”: 模板 参数太少
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      参见“std::unique_ptr”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(95,18): error C3203: "unique_ptr": 未指定的 类 模板 不能用作 模板 参数 "_Ty" 的 模板 参数，应为真实类型
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(47,22): error C2653: “ChatService”: 不是类或命名空间名称
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(47,35): error C3861: “NewStub”: 找不到标识符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(69,4): error C2440: “return”: 无法从“nullptr”转换为“std::unique_ptr”
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(69,4):
+      “std::unique_ptr<_Ty,_Dx>::unique_ptr(const std::unique_ptr<_Ty,_Dx> &)”: 不能将“this”指针从“std::unique_ptr”转换为“std::unique_ptr<_Ty,_Dx> &”
+          C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(69,4):
+          原因如下: 无法从“std::unique_ptr”转换为“std::unique_ptr<_Ty,_Dx>”
+          C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(69,4):
+          转换要求第二个用户定义的转换运算符或构造函数
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3399,5):
+          可能是“std::unique_ptr<_Ty,_Dx>::unique_ptr(std::auto_ptr<_Other> &&) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3393,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(std::unique_ptr<_Ux,_Dx> &&) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3385,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(std::unique_ptr<_Ty,_Dx> &&) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3382,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(_Get_deleter_pointer_type<_Ty,remove_reference<_Ty1>::type,void>::type,remove_reference<_Ty1>::type &&)”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3377,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(_Get_deleter_pointer_type<_Ty,remove_reference<_Ty1>::type,void>::type,_Dx &&) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3373,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(_Get_deleter_pointer_type<_Ty,remove_reference<_Ty1>::type,void>::type,const _Dx &) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3360,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(std::nullptr_t) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3357,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(void) noexcept”
+          C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(69,4):
+          尝试匹配参数列表“(nullptr)”时
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(73,3): error C2440: “return”: 无法从“int”转换为“std::unique_ptr”
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(73,3):
+      “std::unique_ptr<_Ty,_Dx>::unique_ptr(const std::unique_ptr<_Ty,_Dx> &)”: 不能将“this”指针从“std::unique_ptr”转换为“std::unique_ptr<_Ty,_Dx> &”
+          C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(73,3):
+          原因如下: 无法从“std::unique_ptr”转换为“std::unique_ptr<_Ty,_Dx>”
+          C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(73,3):
+          转换要求第二个用户定义的转换运算符或构造函数
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3399,5):
+          可能是“std::unique_ptr<_Ty,_Dx>::unique_ptr(std::auto_ptr<_Other> &&) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3393,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(std::unique_ptr<_Ux,_Dx> &&) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3385,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(std::unique_ptr<_Ty,_Dx> &&) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3382,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(_Get_deleter_pointer_type<_Ty,remove_reference<_Ty1>::type,void>::type,remove_reference<_Ty1>::type &&)”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3377,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(_Get_deleter_pointer_type<_Ty,remove_reference<_Ty1>::type,void>::type,_Dx &&) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3373,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(_Get_deleter_pointer_type<_Ty,remove_reference<_Ty1>::type,void>::type,const _Dx &) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3360,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(std::nullptr_t) noexcept”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3357,5):
+          或    “std::unique_ptr<_Ty,_Dx>::unique_ptr(void) noexcept”
+          C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(73,3):
+          尝试匹配参数列表“(int)”时
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(81,26): error C2672: “std::move”: 未找到匹配的重载函数
+  (编译源文件“ChatGrpcClient.cpp”)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(5160,21):
+      可能是“_OutIt std::move(_InIt,_InIt,_OutIt)”
+          C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(81,26):
+          “_OutIt std::move(_InIt,_InIt,_OutIt)”: 应输入 3 个参数，却提供了 1 个
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(1512,64):
+      或    “remove_reference<_Ty>::type &&std::move(_Ty &&) noexcept”
+          C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(81,26):
+          未能使函数模板“remove_reference<_Ty>::type &&std::move(_Ty &&) noexcept”专用化
+              C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(81,26):
+              用下列模板参数:
+                  C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(81,26):
+                  “_Ty=std::unique_ptr &”
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xtr1common(235,78):
+              “std::unique_ptr”: 使用 类 模板 需要 模板 参数列表
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+              参见“std::unique_ptr”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(108,15): error C3646: “NotifyAddFriend”: 未知重写说明符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(108,30): error C2059: 语法错误:“(”
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(108,78): error C2238: 意外的标记位于“;”之前
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(109,16): error C3646: “NotifyAuthFriend”: 未知重写说明符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(109,32): error C2059: 语法错误:“(”
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(109,81): error C2238: 意外的标记位于“;”之前
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(111,17): error C3646: “NotifyTextChatMsg”: 未知重写说明符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(111,34): error C2059: 语法错误:“(”
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(111,112): error C2238: 意外的标记位于“;”之前
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(112,14): error C3646: “NotifyKickUser”: 未知重写说明符
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(112,28): error C2059: 语法错误:“(”
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(112,75): error C2238: 意外的标记位于“;”之前
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\MysqlDao.h(146,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(32,30): error C2039: "NotifyAddFriend": 不是 "ChatGrpcClient" 的成员
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(100,7):
+      参见“ChatGrpcClient”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(32,1): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(32,30): error C2146: 语法错误: 缺少“;”(在标识符“NotifyAddFriend”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(33,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(33,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(109,31): error C2039: "NotifyAuthFriend": 不是 "ChatGrpcClient" 的成员
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(100,7):
+      参见“ChatGrpcClient”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(109,1): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(109,31): error C2146: 语法错误: 缺少“;”(在标识符“NotifyAuthFriend”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(109,97): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(109,97): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(139,32): error C2039: "NotifyTextChatMsg": 不是 "ChatGrpcClient" 的成员
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(100,7):
+      参见“ChatGrpcClient”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(139,1): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(139,32): error C2146: 语法错误: 缺少“;”(在标识符“NotifyTextChatMsg”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(140,57): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(140,57): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(177,29): error C2039: "NotifyKickUser": 不是 "ChatGrpcClient" 的成员
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.h(100,7):
+      参见“ChatGrpcClient”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(177,1): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(177,29): error C2146: 语法错误: 缺少“;”(在标识符“NotifyKickUser”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(178,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatGrpcClient.cpp(178,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+  ChatServer.cpp
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
-  (编译源文件“LogicSystem.cpp”)
+  (编译源文件“ChatServer.cpp”)
   
-C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\RedisMgr.h(184,27): warning C4101: “exp”: 未引用的局部变量
-  (编译源文件“LogicSystem.cpp”)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(10,40): error C2039: "work": 不是 "boost::asio::io_context" 的成员
+  (编译源文件“ChatServer.cpp”)
+      C:\cppsoft\boost_1_90_0\boost\asio\io_context.hpp(192,7):
+      参见“boost::asio::io_context”的声明
   
-C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\MysqlDao.h(131,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-  (编译源文件“LogicSystem.cpp”)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(10,40): error C2061: 语法错误: 标识符“work”
+  (编译源文件“ChatServer.cpp”)
   
-  message.grpc.pb.cc
-  RedisMgr.cpp
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(11,34): error C2065: “Work”: 未声明的标识符
+  (编译源文件“ChatServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(11,23): error C2923: "std::unique_ptr": "Work" 不是参数 "_Ty" 的有效 模板 类型参数
+  (编译源文件“ChatServer.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(11,34):
+      参见“Work”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(11,23): error C2976: “std::unique_ptr'”: 模板 参数太少
+  (编译源文件“ChatServer.cpp”)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      参见“std::unique_ptr”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(21,14): error C3203: "unique_ptr": 未指定的 类 模板 不能用作 模板 参数 "_Ty" 的 模板 参数，应为真实类型
+  (编译源文件“ChatServer.cpp”)
+  
+  ChatServiceImpl.cpp
+C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(14,16): error C2039: "AddFriendReq": 不是 "message" 的成员
+  (编译源文件“ChatServiceImpl.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(14,1): error C2873: “AddFriendReq”: 符号不能用在 using 声明中
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(15,16): error C2039: "AddFriendRsp": 不是 "message" 的成员
+  (编译源文件“ChatServiceImpl.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(15,1): error C2873: “AddFriendRsp”: 符号不能用在 using 声明中
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(17,16): error C2039: "AuthFriendReq": 不是 "message" 的成员
+  (编译源文件“ChatServiceImpl.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(17,1): error C2873: “AuthFriendReq”: 符号不能用在 using 声明中
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(18,16): error C2039: "AuthFriendRsp": 不是 "message" 的成员
+  (编译源文件“ChatServiceImpl.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(18,1): error C2873: “AuthFriendRsp”: 符号不能用在 using 声明中
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(20,16): error C2039: "ChatService": 不是 "message" 的成员
+  (编译源文件“ChatServiceImpl.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(20,1): error C2873: “ChatService”: 符号不能用在 using 声明中
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(21,16): error C2039: "TextChatMsgReq": 不是 "message" 的成员
+  (编译源文件“ChatServiceImpl.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(21,1): error C2873: “TextChatMsgReq”: 符号不能用在 using 声明中
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(22,16): error C2039: "TextChatMsgRsp": 不是 "message" 的成员
+  (编译源文件“ChatServiceImpl.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(22,1): error C2873: “TextChatMsgRsp”: 符号不能用在 using 声明中
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(23,16): error C2039: "TextChatData": 不是 "message" 的成员
+  (编译源文件“ChatServiceImpl.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(23,1): error C2873: “TextChatData”: 符号不能用在 using 声明中
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(24,16): error C2039: "KickUserReq": 不是 "message" 的成员
+  (编译源文件“ChatServiceImpl.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(24,1): error C2873: “KickUserReq”: 符号不能用在 using 声明中
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(25,16): error C2039: "KickUserRsp": 不是 "message" 的成员
+  (编译源文件“ChatServiceImpl.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\message.grpc.pb.h(29,11):
+      参见“message”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(25,1): error C2873: “KickUserRsp”: 符号不能用在 using 声明中
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(28,37): error C2653: “ChatService”: 不是类或命名空间名称
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(28,50): error C2504: “Service”: 未定义基类
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(32,49): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(32,67): error C2143: 语法错误: 缺少“,”(在“*”的前面)
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(36,3): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(36,22): error C2143: 语法错误: 缺少“,”(在“*”的前面)
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(39,3): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(39,23): error C2143: 语法错误: 缺少“,”(在“*”的前面)
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(45,3): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(45,20): error C2143: 语法错误: 缺少“,”(在“*”的前面)
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(32,9): error C3668: “ChatServiceImpl::NotifyAddFriend”: 包含重写说明符“override”的方法没有重写任何基类方法
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(35,9): error C3668: “ChatServiceImpl::NotifyAuthFriend”: 包含重写说明符“override”的方法没有重写任何基类方法
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(38,9): error C3668: “ChatServiceImpl::NotifyTextChatMsg”: 包含重写说明符“override”的方法没有重写任何基类方法
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.h(44,9): error C3668: “ChatServiceImpl::NotifyKickUser”: 包含重写说明符“override”的方法没有重写任何基类方法
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\MysqlDao.h(146,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  (编译源文件“ChatServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(15,65): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(15,83): error C2143: 语法错误: 缺少“,”(在“*”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(18,15): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(19,52): error C3536: “touid”: 初始化之前无法使用
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(21,15): error C3481: “request”: 未找到 lambda 捕获变量
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(21,24): error C3481: “reply”: 未找到 lambda 捕获变量
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(22,3): error C2065: “reply”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(23,3): error C2065: “reply”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(23,23): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(24,3): error C2065: “reply”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(24,20): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(28,6): error C3536: “session”: 初始化之前无法使用
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(28,14): error C2446: “==”: 没有从“nullptr”到“<error type>”的转换
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(28,17):
+      本机 nullptr 只能转换为 bool 或使用 reinterpret_cast 转换为整型
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(35,24): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(36,20): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(37,20): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(38,20): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(39,19): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(40,20): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(48,66): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(48,85): error C2143: 语法错误: 缺少“,”(在“*”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(51,15): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(52,17): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(53,52): error C3536: “touid”: 初始化之前无法使用
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(55,15): error C3481: “request”: 未找到 lambda 捕获变量
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(55,24): error C3481: “reply”: 未找到 lambda 捕获变量
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(56,3): error C2065: “reply”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(57,3): error C2065: “reply”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(57,22): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(58,3): error C2065: “reply”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(58,20): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(62,6): error C3536: “session”: 初始化之前无法使用
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(62,14): error C2446: “==”: 没有从“nullptr”到“<error type>”的转换
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(62,17):
+      本机 nullptr 只能转换为 bool 或使用 reinterpret_cast 转换为整型
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(69,23): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(70,21): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(72,57): error C3536: “fromuid”: 初始化之前无法使用
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(92,2): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(92,22): error C2143: 语法错误: 缺少“,”(在“*”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(94,15): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(95,52): error C3536: “touid”: 初始化之前无法使用
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(96,2): error C2065: “reply”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(99,6): error C3536: “session”: 初始化之前无法使用
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(99,14): error C2446: “==”: 没有从“nullptr”到“<error type>”的转换
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(99,17):
+      本机 nullptr 只能转换为 bool 或使用 reinterpret_cast 转换为整型
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(106,23): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(107,21): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(111,19): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(111,13): error C2530: “msg”: 必须初始化引用
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(111,13): error C3531: “msg”: 类型包含“auto”的符号必须具有初始值设定项
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(111,17): error C2143: 语法错误: 缺少“;”(在“:”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(111,38): error C2143: 语法错误: 缺少“;”(在“)”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(174,2): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(174,19): error C2143: 语法错误: 缺少“,”(在“*”的前面)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(177,13): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(178,52): error C3536: “uid”: 初始化之前无法使用
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(180,15): error C3481: “request”: 未找到 lambda 捕获变量
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(180,24): error C3481: “reply”: 未找到 lambda 捕获变量
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(181,3): error C2065: “reply”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(182,3): error C2065: “reply”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(182,18): error C2065: “request”: 未声明的标识符
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(186,6): error C3536: “session”: 初始化之前无法使用
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(186,14): error C2446: “==”: 没有从“nullptr”到“<error type>”的转换
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\ChatServiceImpl.cpp(186,17):
+      本机 nullptr 只能转换为 bool 或使用 reinterpret_cast 转换为整型
+  
+  CServer.cpp
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
-  (编译源文件“RedisMgr.cpp”)
+  (编译源文件“CServer.cpp”)
   
-C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\RedisMgr.h(184,27): warning C4101: “exp”: 未引用的局部变量
-  (编译源文件“RedisMgr.cpp”)
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(10,40): error C2039: "work": 不是 "boost::asio::io_context" 的成员
+  (编译源文件“CServer.cpp”)
+      C:\cppsoft\boost_1_90_0\boost\asio\io_context.hpp(192,7):
+      参见“boost::asio::io_context”的声明
   
-  VerifyGrpcClient.cpp
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(10,40): error C2061: 语法错误: 标识符“work”
+  (编译源文件“CServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(11,34): error C2065: “Work”: 未声明的标识符
+  (编译源文件“CServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(11,23): error C2923: "std::unique_ptr": "Work" 不是参数 "_Ty" 的有效 模板 类型参数
+  (编译源文件“CServer.cpp”)
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(11,34):
+      参见“Work”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(11,23): error C2976: “std::unique_ptr'”: 模板 参数太少
+  (编译源文件“CServer.cpp”)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      参见“std::unique_ptr”的声明
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\AsioIOServicePool.h(21,14): error C3203: "unique_ptr": 未指定的 类 模板 不能用作 模板 参数 "_Ty" 的 模板 参数，应为真实类型
+  (编译源文件“CServer.cpp”)
+  
+  UserMgr.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
-  (编译源文件“VerifyGrpcClient.cpp”)
+  (编译源文件“UserMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\RedisMgr.h(184,28): warning C4101: “exp”: 未引用的局部变量
+  (编译源文件“UserMgr.cpp”)
   
   正在生成代码...
-  ChatServer.vcxproj -> C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\x64\Debug\ChatServer.exe
-  找不到文件 - config.ini
-  复制了 0 个文件
-  C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\mysqlcppconn-9-vs14.dll
-  C:\Users\Kevin\Documents\GitHub\Project\mychat\ChatServer\mysqlcppconn8-2-vs14.dll
-  复制了 2 个文件

@@ -1,22 +1,22 @@
-ï»¿#include "ConfigMgr.h"
-ConfigMgr::ConfigMgr() {
-	// è·å–å½“å‰å·¥ä½œç›®å½•  
+#include "ConfigMgr.h"
+ConfigMgr::ConfigMgr(){
+	// »ñÈ¡µ±Ç°¹¤×÷Ä¿Â¼  
 	boost::filesystem::path current_path = boost::filesystem::current_path();
-	// æ„å»ºconfig.iniæ–‡ä»¶çš„å®Œæ•´è·¯å¾„  
+	// ¹¹½¨config.iniÎÄ¼şµÄÍêÕûÂ·¾¶  
 	boost::filesystem::path config_path = current_path / "config.ini";
 	std::cout << "Config path: " << config_path << std::endl;
 
-	// ä½¿ç”¨Boost.PropertyTreeæ¥è¯»å–INIæ–‡ä»¶  
+	// Ê¹ÓÃBoost.PropertyTreeÀ´¶ÁÈ¡INIÎÄ¼ş  
 	boost::property_tree::ptree pt;
 	boost::property_tree::read_ini(config_path.string(), pt);
 
 
-	// éå†INIæ–‡ä»¶ä¸­çš„æ‰€æœ‰section  
+	// ±éÀúINIÎÄ¼şÖĞµÄËùÓĞsection  
 	for (const auto& section_pair : pt) {
 		const std::string& section_name = section_pair.first;
 		const boost::property_tree::ptree& section_tree = section_pair.second;
 
-		// å¯¹äºæ¯ä¸ªsectionï¼Œéå†å…¶æ‰€æœ‰çš„key-valueå¯¹  
+		// ¶ÔÓÚÃ¿¸ösection£¬±éÀúÆäËùÓĞµÄkey-value¶Ô  
 		std::map<std::string, std::string> section_config;
 		for (const auto& key_value_pair : section_tree) {
 			const std::string& key = key_value_pair.first;
@@ -25,11 +25,11 @@ ConfigMgr::ConfigMgr() {
 		}
 		SectionInfo sectionInfo;
 		sectionInfo._section_datas = section_config;
-		// å°†sectionçš„key-valueå¯¹ä¿å­˜åˆ°config_mapä¸­  
+		// ½«sectionµÄkey-value¶Ô±£´æµ½config_mapÖĞ  
 		_config_map[section_name] = sectionInfo;
 	}
 
-	// è¾“å‡ºæ‰€æœ‰çš„sectionå’Œkey-valueå¯¹  
+	// Êä³öËùÓĞµÄsectionºÍkey-value¶Ô  
 	for (const auto& section_entry : _config_map) {
 		const std::string& section_name = section_entry.first;
 		SectionInfo section_config = section_entry.second;

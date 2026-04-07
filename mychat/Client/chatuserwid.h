@@ -21,7 +21,6 @@ public:
 
     void SetInfo(QString name, QString head, QString msg);
 
-
 private:
     Ui::ChatUserWid *ui;
     QString _name;

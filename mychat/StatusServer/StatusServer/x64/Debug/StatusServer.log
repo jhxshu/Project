@@ -1,18 +1,4 @@
-﻿  AsioIOServicePool.cpp
-  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
-  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
-  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
-  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-  ConfigMgr.cpp
-  message.grpc.pb.cc
-  message.pb.cc
-C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(530,67): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(787,65): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(1009,67): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(1305,65): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(1547,67): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc(1554,65): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
-  MysqlDao.cpp
+﻿  MysqlDao.cpp
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.

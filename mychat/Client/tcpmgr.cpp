@@ -2,6 +2,8 @@
 #include <QAbstractSocket>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include "usermgr.h"
+
 TcpMgr::TcpMgr(): _host(""), _port(0), _b_recv_pending(false), _message_id(0), _message_len(0)
 {
     QObject::connect(&_socket, &QTcpSocket::connected, [&](){
@@ -86,7 +88,10 @@ void TcpMgr::initHandlers(){
             emit sig_login_failed(err);
             return;
         }
-        emit sig_swich_chatdlg();
+        UserMgr::GetInstance()->SetUid(jsonObj["uid"].toInt());
+        UserMgr::GetInstance()->SetName(jsonObj["name"].toString());
+        UserMgr::GetInstance()->SetToken(jsonObj["token"].toString());
+        emit sig_switch_chatdlg();
     });
 }
 
@@ -99,8 +104,6 @@ void TcpMgr::handleMsg(ReqId id, int len, QByteArray data){
     find_iter.value()(id, len, data);
 }
 
-
-
 void TcpMgr::slot_tcp_connect(ServerInfo si){
     qDebug() << "receive tcp connect signal.";
     qDebug() << "Connecting to server...";
@@ -110,16 +113,17 @@ void TcpMgr::slot_tcp_connect(ServerInfo si){
     _socket.connectToHost(si.Host, _port);
 }
 
-void TcpMgr::slot_send_data(ReqId reqId, QByteArray dataBytes)
-{
+void TcpMgr::slot_send_data(ReqId reqId, QString data){
     uint16_t id = reqId;
-    quint16 len = static_cast<quint16>(dataBytes.length());
+    QByteArray dataBytes = data.toUtf8();
+    quint16 len = static_cast<quint16>(data.size());
+
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
     out.setByteOrder(QDataStream::BigEndian);
 
     out << id << len;
-    block.append(dataBytes);
+    block.append(data.toUtf8());
     _socket.write(block);
-    qDebug() << "tcp mgr send byte data is " << block ;
 }
+

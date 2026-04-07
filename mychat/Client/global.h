@@ -63,10 +63,10 @@ enum ChatUIMode{
 };
 
 enum ListItemType{
-    CHAt_USER_ITEM,
-    CONTACT_SUER_ITEM,
+    CHAT_USER_ITEM,
+    CONTACT_USER_ITEM,
     SEARCH_USER_ITEM,
-    ADD_USER_TIP_ITEM,
+    ADD_USER_ITEM,
     INVALID_ITEM,
     GROUP_TIP_ITEM,
 };
