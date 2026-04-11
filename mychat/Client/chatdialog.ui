@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>950</width>
     <height>800</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>800</width>
+    <width>950</width>
     <height>800</height>
    </size>
   </property>
@@ -96,47 +96,28 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QLabel" name="side_chat_lb">
-           <property name="minimumSize">
-            <size>
-             <width>30</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>30</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="sid_contact_lb">
-           <property name="minimumSize">
-            <size>
-             <width>30</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>30</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QLabel" name="side_head_lb">
            <property name="minimumSize">
             <size>
+             <width>35</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>35</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="StateWidget" name="side_chat_lb" native="true">
+           <property name="minimumSize">
+            <size>
              <width>30</width>
              <height>30</height>
             </size>
@@ -147,8 +128,21 @@
              <height>30</height>
             </size>
            </property>
-           <property name="text">
-            <string/>
+          </widget>
+         </item>
+         <item>
+          <widget class="StateWidget" name="side_contact_lb" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
            </property>
           </widget>
          </item>
@@ -270,7 +264,7 @@
        <widget class="ChatUserList" name="chat_user_list"/>
       </item>
       <item>
-       <widget class="QListWidget" name="search_list">
+       <widget class="SearchList" name="search_list">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -288,7 +282,7 @@
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <widget class="ChatPage" name="chat_page"/>
-     <widget class="QWidget" name="page_"/>
+     <widget class="QWidget" name="friend_apply_page"/>
     </widget>
    </item>
   </layout>
@@ -314,6 +308,17 @@
    <extends>QWidget</extends>
    <header location="global">chatpage.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>StateWidget</class>
+   <extends>QWidget</extends>
+   <header>statewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SearchList</class>
+   <extends>QListWidget</extends>
+   <header>searchlist.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

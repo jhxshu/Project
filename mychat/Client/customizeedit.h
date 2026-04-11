@@ -31,6 +31,7 @@ private:
     int _max_len;
 signals:
     void sig_focus_out();
+    void sig_enter_pressed();
 };
 
 #endif // CUSTOMIZEEDIT_H
