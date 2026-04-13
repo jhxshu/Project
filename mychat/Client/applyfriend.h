@@ -21,6 +21,8 @@ public:
     void AddTipLbs(ClickedLabel*, QPoint cur_point, QPoint &next_point, int text_width, int text_height);
     bool eventFilter(QObject *obj, QEvent *event);
     void SetSearchInfo(std::shared_ptr<SearchInfo> si);
+    bool SetCurState(ClickLbState state);
+    void ResetNormalState();
 private:
     Ui::ApplyFriend *ui;
     void resetLabels();

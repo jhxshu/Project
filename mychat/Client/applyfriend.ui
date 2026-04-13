@@ -103,7 +103,7 @@
         <widget class="QWidget" name="apply_wid" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
-           <widget class="Line" name="line">
+           <widget class="Line" name="h_line">
             <property name="orientation">
              <enum>Qt::Orientation::Horizontal</enum>
             </property>
@@ -236,7 +236,7 @@
                  <height>40</height>
                 </size>
                </property>
-               <widget class="QLineEdit" name="lb_ed">
+               <widget class="CustomizeEdit" name="lb_ed">
                 <property name="geometry">
                  <rect>
                   <x>2</x>
@@ -255,7 +255,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="input_wid" native="true">
+              <widget class="QWidget" name="input_tip_wid" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -287,7 +287,7 @@
                 <item>
                  <widget class="ClickedOnceLabel" name="tip_lb">
                   <property name="text">
-                   <string>TextLabel</string>
+                   <string/>
                   </property>
                  </widget>
                 </item>

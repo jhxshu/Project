@@ -84,4 +84,13 @@ enum ListItemType{
     APPLY_FRIEND_ITEM, //好友申请
 };
 
+const int MIN_APPLY_LABEL_ED_LEN = 40;
+
+const QString add_prefix = "添加标签 ";
+
+const int  tip_offset = 5;
+
+extern std::vector<QString> strs;
+extern std::vector<QString> heads;
+extern std::vector<QString> names;
 #endif // GLOBAL_H

@@ -1,9 +1,10 @@
 #include "findsuccessdlg.h"
 #include "ui_findsuccessdlg.h"
 #include <QDir>
+#include "applyfriend.h"
 FindSuccessDlg::FindSuccessDlg(QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::FindSuccessDlg)
+    , ui(new Ui::FindSuccessDlg), _parent(parent)
 {
     ui->setupUi(this);
     setWindowTitle("添加");
@@ -26,11 +27,27 @@ FindSuccessDlg::~FindSuccessDlg()
 
 void FindSuccessDlg::SetSearchInfo(std::shared_ptr<SearchInfo> si)
 {
-    ui->name_lb->setText(si->_name);
+    qDebug() << "=== FindSuccessDlg::SetSearchInfo ===";
+    qDebug() << "si address:" << si.get();
+    qDebug() << "si use_count:" << si.use_count();
+
+    if (si) {
+        qDebug() << "si->_name:" << si->_name;
+        ui->name_lb->setText(si->_name);
+    } else {
+        qDebug() << "ERROR: Received null si!";
+    }
+
     _si = si;
+    qDebug() << "_si stored, use_count:" << _si.use_count();
 }
 
 void FindSuccessDlg::on_add_friend_btn_clicked()
 {
-
+    this->hide();
+    //弹出加好友界面
+    auto applyFriend = new ApplyFriend(_parent);
+    applyFriend->SetSearchInfo(_si);
+    applyFriend->setModal(true);
+    applyFriend->show();
 }

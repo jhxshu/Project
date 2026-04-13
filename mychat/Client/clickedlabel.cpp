@@ -1,5 +1,6 @@
 #include "clickedlabel.h"
 #include <QMouseEvent>
+#include <QEnterEvent>
 ClickedLabel::ClickedLabel(QWidget *parent): QLabel(parent), _curstate(ClickLbState::Normal) {
      this->setCursor(Qt::PointingHandCursor);
 }
@@ -42,7 +43,7 @@ void ClickedLabel::mouseReleaseEvent(QMouseEvent *event)
             repolish(this);
             update();
         }
-        emit clicked();
+        emit clicked(this->text(), _curstate);
         return;
     }
     // 调用基类的mousePressEvent以保证正常的事件处理
@@ -102,3 +103,26 @@ void ClickedLabel::leaveEvent(QEvent* event){
 ClickLbState ClickedLabel::GetCurState(){
     return _curstate;
 }
+
+void ClickedLabel::ResetNormalState()
+{
+    _curstate = ClickLbState::Normal;
+    setProperty("state", _normal);
+    repolish(this);
+}
+
+bool ClickedLabel::SetCurState(ClickLbState state)
+{
+    _curstate = state;
+    if (_curstate == ClickLbState::Normal) {
+        setProperty("state", _normal);
+        repolish(this);
+    }
+    else if (_curstate == ClickLbState::Selected) {
+        setProperty("state", _selected);
+        repolish(this);
+    }
+
+    return true;
+}
+
