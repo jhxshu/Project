@@ -283,7 +283,7 @@ void RegisterDialog::on_confirm_btn_clicked()
         json_obj["email"] = ui->email_edit->text();
         json_obj["passwd"] = xorString(ui->pass_edit->text());
         json_obj["confirm"] = xorString(ui->confirm_edit->text());
-        json_obj["varifycode"] = ui->verify_edit->text();
+        json_obj["verifycode"] = ui->verify_edit->text();
         HttpMgr::GetInstance()->PostHttpReq(QUrl(gate_url_prefix+"/user_register"),
                                             json_obj, ReqId::ID_REG_USER,Modules::REGISTERMOD);
     }

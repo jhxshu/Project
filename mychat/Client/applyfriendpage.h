@@ -25,7 +25,7 @@ protected:
 private:
     Ui::ApplyFriendPage *ui;
     void loadApplyList();
-    std::unordered_map<int, ApplyFriendItem> _unauth_items;
+    std::unordered_map<int, ApplyFriendItem*> _unauth_items;
 public slots:
     void slot_auth_rsp(std::shared_ptr<AuthRsp>);
 signals:

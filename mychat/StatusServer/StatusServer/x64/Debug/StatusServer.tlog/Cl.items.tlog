@@ -1,4 +1,5 @@
 C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\AsioIOServicePool.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer\x64\Debug\AsioIOServicePool.obj
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\ChatGrpcClient.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer\x64\Debug\ChatGrpcClient.obj
 C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\ConfigMgr.cpp;C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer\x64\Debug\ConfigMgr.obj
 C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.grpc.pb.cc;C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer\x64\Debug\message.grpc.pb.obj
 C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\message.pb.cc;C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer\x64\Debug\message.pb.obj

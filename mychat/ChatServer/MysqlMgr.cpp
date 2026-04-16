@@ -1,13 +1,13 @@
-#include "MysqlMgr.h"
+﻿#include "MysqlMgr.h"
 
 
 MysqlMgr::~MysqlMgr() {
 
 }
 
-int MysqlMgr::RegUser(const std::string& name, const std::string& email, const std::string& pwd)
+int MysqlMgr::RegUser(const std::string& name, const std::string& email, const std::string& pwd, const std::string& icon)
 {
-	return _dao.RegUser(name, email, pwd);
+	return _dao.RegUserTransaction(name, email, pwd, icon);
 }
 
 bool MysqlMgr::CheckEmail(const std::string& name, const std::string& email) {
@@ -21,21 +21,12 @@ bool MysqlMgr::UpdatePwd(const std::string& name, const std::string& pwd) {
 MysqlMgr::MysqlMgr() {
 }
 
-bool MysqlMgr::CheckPwd(const std::string& name, const std::string& pwd, UserInfo& userInfo) {
-	return _dao.CheckPwd(name, pwd, userInfo);
+bool MysqlMgr::CheckPwd(const std::string& email, const std::string& pwd, UserInfo& userInfo) {
+	return _dao.CheckPwd(email, pwd, userInfo);
 }
 
-bool MysqlMgr::AddFriendApply(const int& from, const int& to)
-{
-	return _dao.AddFriendApply(from, to);
-}
-
-bool MysqlMgr::AuthFriendApply(const int& from, const int& to) {
-	return _dao.AuthFriendApply(from, to);
-}
-
-bool MysqlMgr::AddFriend(const int& from, const int& to, std::string back_name) {
-	return _dao.AddFriend(from, to, back_name);
+bool MysqlMgr::TestProcedure(const std::string& email, int& uid, string& name) {
+	return _dao.TestProcedure(email, uid, name);
 }
 
 std::shared_ptr<UserInfo> MysqlMgr::GetUser(int uid)
@@ -48,13 +39,6 @@ std::shared_ptr<UserInfo> MysqlMgr::GetUser(std::string name)
 	return _dao.GetUser(name);
 }
 
-bool MysqlMgr::GetApplyList(int touid, 
-	std::vector<std::shared_ptr<ApplyInfo>>& applyList, int begin, int limit) {
-
-	return _dao.GetApplyList(touid, applyList, begin, limit);
+bool MysqlMgr::AddFriendApply(const int& from, const int& to) {
+	return _dao.AddFriendApply(from, to);
 }
-
-bool MysqlMgr::GetFriendList(int self_id, std::vector<std::shared_ptr<UserInfo> >& user_info) {
-	return _dao.GetFriendList(self_id, user_info);
-}
-

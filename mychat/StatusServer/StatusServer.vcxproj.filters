@@ -42,6 +42,9 @@
     <ClCompile Include="RedisMgr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ChatGrpcClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StatusServiceImpl.h">
@@ -74,8 +77,12 @@
     <ClInclude Include="SingleTon.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ChatGrpcClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config.ini" />
+    <None Include="message.proto" />
   </ItemGroup>
 </Project>

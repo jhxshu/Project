@@ -1,16 +1,13 @@
 ﻿#include "RedisMgr.h"
 #include "const.h"
 #include "ConfigMgr.h"
+#include <iostream>
 RedisMgr::RedisMgr() {
 	auto& gCfgMgr = ConfigMgr::Inst();
 	auto host = gCfgMgr["Redis"]["Host"];
 	auto port = gCfgMgr["Redis"]["Port"];
 	auto pwd = gCfgMgr["Redis"]["Passwd"];
 	_con_pool.reset(new RedisConPool(5, host.c_str(), atoi(port.c_str()), pwd.c_str()));
-}
-
-RedisMgr::~RedisMgr() {
-	Close();
 }
 
 

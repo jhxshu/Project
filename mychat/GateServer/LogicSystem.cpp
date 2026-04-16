@@ -3,6 +3,7 @@
 #include "VerifyGrpcClient.h"
 #include "RedisMgr.h"
 #include "MysqlMgr.h"
+#include "StatusGrpcClient.h"
 LogicSystem::LogicSystem() {
 	RegGet("/get_test", [](std::shared_ptr<HttpConnection> connection) {
 				beast::ostream(connection->_response.body()) << "receive get_test req " << std::endl;
@@ -129,7 +130,7 @@ LogicSystem::LogicSystem() {
 					return true;
 				}
 
-				if (Verify_code != src_root["Verifycode"].asString()) {
+				if (Verify_code != src_root["verifycode"].asString()) {
 					std::cout << " Verify code error" << std::endl;
 					root["error"] = ErrorCodes::VerifyCodeErr;
 					std::string jsonstr = root.toStyledString();
@@ -153,7 +154,7 @@ LogicSystem::LogicSystem() {
 				root["passwd"] = pwd;
 				root["confirm"] = confirm;
 				root["icon"] = icon;
-				root["Verifycode"] = src_root["Verifycode"].asString();
+				root["verifycode"] = src_root["verifycode"].asString();
 				std::string jsonstr = root.toStyledString();
 				beast::ostream(connection->_response.body()) << jsonstr;
 				return true;
@@ -191,7 +192,7 @@ LogicSystem::LogicSystem() {
 					return true;
 				}
 
-				if (Verify_code != src_root["Verifycode"].asString()) {
+				if (Verify_code != src_root["verifycode"].asString()) {
 					std::cout << " Verify code error" << std::endl;
 					root["error"] = ErrorCodes::VerifyCodeErr;
 					std::string jsonstr = root.toStyledString();
@@ -230,6 +231,8 @@ LogicSystem::LogicSystem() {
 				});
 
 			//用户登录逻辑
+			//用户登录逻辑
+			//用户登录逻辑
 			RegPost("/user_login", [](std::shared_ptr<HttpConnection> connection) {
 				auto body_str = boost::beast::buffers_to_string(connection->_request.body().data());
 				std::cout << "receive body is " << body_str << std::endl;
@@ -258,14 +261,22 @@ LogicSystem::LogicSystem() {
 					beast::ostream(connection->_response.body()) << jsonstr;
 					return true;
 				}
+
 				std::cout << "succeed to load userinfo uid is " << userInfo.uid << std::endl;
+
+				// 返回登录成功信息
 				root["error"] = 0;
 				root["email"] = email;
 				root["uid"] = userInfo.uid;
+				root["token"] = "temp_token_" + std::to_string(userInfo.uid);
+				root["host"] = "127.0.0.1";
+				root["port"] = 8090;  // 注意：小写 port
+
 				std::string jsonstr = root.toStyledString();
+				std::cout << "Login response JSON: " << jsonstr << std::endl;  // 添加调试日志
 				beast::ostream(connection->_response.body()) << jsonstr;
 				return true;
-				});
+				});	
 		}
 
 		void LogicSystem::RegGet(std::string url, HttpHandler handler) {

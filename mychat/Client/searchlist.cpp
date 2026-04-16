@@ -42,9 +42,17 @@ void SearchList::SetSearchEdit(QWidget *edit)
 
 void SearchList::waitPending(bool pending)
 {
-
+    if(pending){
+        _loadingDialog = new LoadingDlg(this);
+        _loadingDialog->setModal(true);
+        _loadingDialog->show();
+        _send_pending = pending;
+    }else{
+        _loadingDialog->hide();
+        _loadingDialog->deleteLater();
+        _send_pending = pending;
+    }
 }
-
 void SearchList::addTipItem()
 {
     auto *invalid_item = new QWidget();
@@ -82,20 +90,20 @@ void SearchList::slot_item_clicked(QListWidgetItem *item)
         return;
     }
     if(itemType == ListItemType::ADD_USER_TIP_ITEM){
-        // if(_send_pending){
-        //     return;
-        // }
-        // waitPending(true);
-        // auto search_edit = dynamic_cast<CustomizeEdit*>(_search_edit);
-        // auto uid_str = search_edit->text();
-        // //发送请求给server
-        // QJsonObject jsonObj;
-        // jsonObj["uid"] = uid_str;
+        if(_send_pending){
+            return;
+        }
+        waitPending(true);
+        auto search_edit = dynamic_cast<CustomizeEdit*>(_search_edit);
+        auto uid_str = search_edit->text();
+        //发送请求给server
+        QJsonObject jsonObj;
+        jsonObj["uid"] = uid_str;
 
-        // QJsonDocument doc(jsonObj);
-        // QString jsonString = doc.toJson(QJsonDocument::Indented);
+        QJsonDocument doc(jsonObj);
+        QByteArray jsonData = doc.toJson(QJsonDocument::Indented);
 
-        // emit TcpMgr::GetInstance()->sig_send_data(ReqId::ID_SEARCH_USER_REQ, jsonString);
+        emit TcpMgr::GetInstance()->sig_send_data(ReqId::ID_SEARCH_USER_REQ, jsonData);
 
 
         _find_dlg = std::make_shared<FindSuccessDlg>(this);
@@ -110,5 +118,15 @@ void SearchList::slot_item_clicked(QListWidgetItem *item)
 
 void SearchList::slot_user_search(std::shared_ptr<SearchInfo> si)
 {
+    waitPending(false);
+    if(si == nullptr){
+        _find_dlg = std::make_shared<FindFailDlg>(this);
+    }else{
+        //此处分两种情况，一种是搜多到已经是自己的朋友了，一种是未添加好友
+        //查找是否已经是好友 todo...
+        _find_dlg = std::make_shared<FindSuccessDlg>(this);
+        std::dynamic_pointer_cast<FindSuccessDlg>(_find_dlg)->SetSearchInfo(si);
+    }
 
+    _find_dlg->show();
 }

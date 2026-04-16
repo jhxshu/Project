@@ -3,11 +3,16 @@
 #include <QDebug>
 #include <QPainter>
 #include <QPainterPath>
-#include <httpmgr.h>
-#include <tcpmgr.h>
+#include <QRegularExpression>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include "httpmgr.h"
+#include "tcpmgr.h"
+
 LoginDialog::LoginDialog(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::LoginDialog)
+    ui(new Ui::LoginDialog),
+    _uid(0)
 {
     ui->setupUi(this);
     connect(ui->reg_btn, &QPushButton::clicked, this, &LoginDialog::switchRegister);
@@ -15,10 +20,18 @@ LoginDialog::LoginDialog(QWidget *parent) :
     connect(ui->forget_label, &ClickedLabel::clicked, this, &LoginDialog::slot_forget_pwd);
     initHead();
     initHttpHandlers();
-    connect(HttpMgr::GetInstance().get(), &HttpMgr::sig_login_mod_finish, this, &LoginDialog::slot_login_mod_finish);
-    connect(this, &LoginDialog::sig_connect_tcp, TcpMgr::GetInstance().get(), &TcpMgr::slot_tcp_connect);
-    connect(TcpMgr::GetInstance().get(), &TcpMgr::sig_con_success, this, &LoginDialog::slot_tcp_con_finish);
-    connect(TcpMgr::GetInstance().get(), &TcpMgr::sig_login_failed, this, &LoginDialog::slot_login_failed);
+
+    connect(HttpMgr::GetInstance().get(), &HttpMgr::sig_login_mod_finish,
+            this, &LoginDialog::slot_login_mod_finish);
+    connect(this, &LoginDialog::sig_connect_tcp,
+            TcpMgr::GetInstance().get(), &TcpMgr::slot_tcp_connect);
+    connect(TcpMgr::GetInstance().get(), &TcpMgr::sig_con_success,
+            this, &LoginDialog::slot_tcp_con_finish);
+    connect(TcpMgr::GetInstance().get(), &TcpMgr::sig_login_failed,
+            this, &LoginDialog::slot_login_failed);
+
+
+    qDebug() << "LoginDialog created, sig_switch_chatdlg connected";
 }
 
 LoginDialog::~LoginDialog(){
@@ -30,6 +43,14 @@ void LoginDialog::initHttpHandlers()
 {
     //注册获取登录回包逻辑
     _handlers.insert(ReqId::ID_LOGIN_USER, [this](QJsonObject jsonObj){
+        qDebug() << "=== Login Response JSON ===";
+        qDebug() << "error:" << jsonObj["error"].toInt();
+        qDebug() << "email:" << jsonObj["email"].toString();
+        qDebug() << "uid:" << jsonObj["uid"].toInt();
+        qDebug() << "host:" << jsonObj["host"].toString();
+        qDebug() << "port:" << jsonObj["port"].toInt();
+        qDebug() << "token:" << jsonObj["token"].toString();
+
         int error = jsonObj["error"].toInt();
         if(error != ErrorCodes::SUCCESS){
             showTip(tr("参数错误"),false);
@@ -38,17 +59,19 @@ void LoginDialog::initHttpHandlers()
         }
         auto email = jsonObj["email"].toString();
 
-        //发送信号通知tcpMgr发送长链接
         ServerInfo si;
         si.Uid = jsonObj["uid"].toInt();
         si.Host = jsonObj["host"].toString();
-        si.Port = jsonObj["port"].toString();
+        si.Port = QString::number(jsonObj["port"].toInt());
         si.Token = jsonObj["token"].toString();
 
         _uid = si.Uid;
         _token = si.Token;
-        qDebug()<< "email is " << email << " uid is " << si.Uid <<" host is "
-                 << si.Host << " Port is " << si.Port << " Token is " << si.Token;
+
+        qDebug() << "email is " << email << " uid is " << si.Uid
+                 << " host is " << si.Host << " Port is " << si.Port
+                 << " Token is " << si.Token;
+
         emit sig_connect_tcp(si);
     });
 }
@@ -57,24 +80,18 @@ bool LoginDialog::checkPwdValid(){
     auto pwd = ui->pass_edit->text();
     if(pwd.length() < 6 || pwd.length() > 15){
         qDebug() << "Pass length invalid";
-        //提示长度不准确
         AddTipErr(TipErr::TIP_PWD_ERR, tr("密码长度应为6~15"));
         return false;
     }
 
-    // 创建一个正则表达式对象，按照上述密码要求
-    // 这个正则表达式解释：
-    // ^[a-zA-Z0-9!@#$%^&*]{6,15}$ 密码长度至少6，可以是字母、数字和特定的特殊字符
     QRegularExpression regExp("^[a-zA-Z0-9!@#$%^&*.]{6,15}$");
     bool match = regExp.match(pwd).hasMatch();
     if(!match){
-        //提示字符非法
         AddTipErr(TipErr::TIP_PWD_ERR, tr("不能包含非法字符且长度为(6~15)"));
-        return false;;
+        return false;
     }
 
     DelTipErr(TipErr::TIP_PWD_ERR);
-
     return true;
 }
 
@@ -110,7 +127,6 @@ void LoginDialog::initHead()
 
     painter.drawPixmap(0, 0, originalPixmap);
     ui->head_label->setPixmap(roundedPixmap);
-
 }
 
 bool LoginDialog::checkUserValid()
@@ -152,7 +168,6 @@ void LoginDialog::showTip(QString str, bool b_ok)
     repolish(ui->err_tip);
 }
 
-
 void LoginDialog::on_login_btn_clicked()
 {
     qDebug() << "login btn clicked.";
@@ -165,7 +180,7 @@ void LoginDialog::on_login_btn_clicked()
     enableBtn(false);
     auto email = ui->email_edit->text();
     auto pwd = ui->pass_edit->text();
-    //发送http请求登录
+
     QJsonObject json_obj;
     json_obj["email"] = email;
     json_obj["passwd"] = xorString(pwd);
@@ -175,34 +190,34 @@ void LoginDialog::on_login_btn_clicked()
 
 void LoginDialog::slot_login_mod_finish(ReqId id, QString res, ErrorCodes err)
 {
+    qDebug() << "Raw response:" << res;
+
     if(err != ErrorCodes::SUCCESS){
         showTip(tr("网络请求错误"),false);
+        enableBtn(true);
         return;
     }
 
-    // 解析 JSON 字符串,res需转化为QByteArray
     QJsonDocument jsonDoc = QJsonDocument::fromJson(res.toUtf8());
-    //json解析错误
     if(jsonDoc.isNull()){
         showTip(tr("json解析错误"),false);
+        enableBtn(true);
         return;
     }
 
-    //json解析错误
     if(!jsonDoc.isObject()){
         showTip(tr("json解析错误"),false);
+        enableBtn(true);
         return;
     }
 
-
-    //调用对应的逻辑,根据id回调。
     _handlers[id](jsonDoc.object());
-
-    return;
 }
 
 void LoginDialog::slot_tcp_con_finish(bool bsuccess)
 {
+    qDebug() << "=== slot_tcp_con_finish called, success:" << bsuccess;
+
     if(bsuccess){
         showTip(tr("聊天服务连接成功，正在登录..."), true);
         QJsonObject jsonObj;
@@ -212,6 +227,9 @@ void LoginDialog::slot_tcp_con_finish(bool bsuccess)
         QJsonDocument doc(jsonObj);
         QByteArray jsonString = doc.toJson(QJsonDocument::Indented);
         emit TcpMgr::GetInstance()->sig_send_data(ReqId::ID_CHAT_LOGIN, jsonString);
+
+        qDebug() << "Emitting sig_switch_chat from LoginDialog";
+        emit TcpMgr::GetInstance()->sig_switch_chatdlg();  // 确保这一行存在
     }
     else{
         showTip(tr("网络异常"), false);
@@ -224,3 +242,5 @@ void LoginDialog::slot_login_failed(int err){
     showTip(result, false);
     enableBtn(true);
 }
+
+

@@ -1,4 +1,47 @@
-﻿  MysqlDao.cpp
+﻿  AsioIOServicePool.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+  ChatGrpcClient.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(29,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(34,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(39,26): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(44,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(50,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(56,26): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(146,26): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(152,26): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(159,22): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(199,36): warning C4101: “exp”: 未引用的局部变量
+  (编译源文件“ChatGrpcClient.cpp”)
+  
+  MysqlDao.cpp
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
@@ -28,7 +71,34 @@ C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\MysqlDao.h(131,16): 
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
   (编译源文件“RedisMgr.cpp”)
   
-C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(184,27): warning C4101: “exp”: 未引用的局部变量
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(29,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“RedisMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(34,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“RedisMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(39,26): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“RedisMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(44,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“RedisMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(50,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“RedisMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(56,26): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“RedisMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(146,26): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“RedisMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(152,26): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“RedisMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(159,22): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“RedisMgr.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(199,36): warning C4101: “exp”: 未引用的局部变量
   (编译源文件“RedisMgr.cpp”)
   
   StatusServer.cpp
@@ -39,20 +109,87 @@ C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(184,27): 
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
   (编译源文件“StatusServer.cpp”)
   
-C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(184,27): warning C4101: “exp”: 未引用的局部变量
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(29,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(34,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(39,26): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(44,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(50,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(56,26): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(146,26): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(152,26): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(159,22): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServer.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(199,36): warning C4101: “exp”: 未引用的局部变量
   (编译源文件“StatusServer.cpp”)
   
 C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\MysqlDao.h(131,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   (编译源文件“StatusServer.cpp”)
   
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(57,25): error C2440: “初始化”: 无法从“std::shared_ptr<T>”转换为“std::shared_ptr<T> &”
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(57,25): error C2440:         with
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(57,25): error C2440:         [
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(57,25): error C2440:             T=RedisMgr
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(57,25): error C2440:         ]
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(57,25):
+      非常量引用只能绑定到左值
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(61,25): error C2440: “初始化”: 无法从“std::shared_ptr<T>”转换为“std::shared_ptr<T> &”
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(61,25): error C2440:         with
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(61,25): error C2440:         [
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(61,25): error C2440:             T=MysqlMgr
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(61,25): error C2440:         ]
+      C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\StatusServer.cpp(61,25):
+      非常量引用只能绑定到左值
+  
   StatusServiceImpl.cpp
 C:\cppsoft\boost_1_90_0\boost\beast\websocket\detail\impl_base.hpp(186,35): warning C4267: “+=”: 从“size_t”转换到“uint8_t”，可能丢失数据
   (编译源文件“StatusServiceImpl.cpp”)
   
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(29,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(34,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(39,26): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(44,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(50,30): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(56,26): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(146,26): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(152,26): warning C4566: 由通用字符名称“\u274C”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(159,22): warning C4566: 由通用字符名称“\u2713”表示的字符不能在当前代码页(936)中表示出来
+  (编译源文件“StatusServiceImpl.cpp”)
+  
+C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\RedisMgr.h(199,36): warning C4101: “exp”: 未引用的局部变量
+  (编译源文件“StatusServiceImpl.cpp”)
+  
   正在生成代码...
-  StatusServer.vcxproj -> C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\x64\Debug\StatusServer.exe
-  C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\config.ini
-  复制了 1 个文件
-  C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\mysqlcppconn-9-vs14.dll
-  C:\Users\Kevin\Documents\GitHub\Project\mychat\StatusServer\mysqlcppconn8-2-vs14.dll
-  复制了 2 个文件
